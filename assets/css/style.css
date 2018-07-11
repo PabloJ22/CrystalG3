@@ -1,0 +1,90 @@
+body {
+    background-image: url("")
+}
+
+div {
+    background-color: white;
+    margin: 15px;
+    width: 50%;
+}
+
+div {
+    border: solid 2px black;
+    padding: 10px;
+}
+
+h1,
+h3,
+span {
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+ol {
+    list-style: decimal inside;
+}
+
+ul {
+    list-style: disc inside;
+    text-indent: 20px;
+}
+
+/* Specfic Elements*/
+
+div.header,
+div.gems {
+    background-color: lightGreen;
+}
+
+div.header,
+div.instructions {
+    width: 40%;
+}
+
+/* Classes */
+
+.numberToMatch,
+.winsAndLosses {
+    float: left;
+    width: 20%;
+    height: 150px;
+    background-color: Gold;
+}
+
+.userTotal {
+    width: 20%;
+    height: 60px;
+    background-color: aquamarine
+}
+
+.crystals {
+    clear: both;
+    width: 23%;
+}
+
+.crysImage {
+    height: 60px;
+    margin: 10px;
+}
+
+/* IDs */
+
+#blue {
+    color: #3092c7;
+}
+
+#green {
+    color: #00aa59;
+}
+
+#red {
+    color: #ec4b5f;
+}
+
+#yellow {
+    color: #ffc225;
+}

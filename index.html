@@ -1,0 +1,78 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Crystal Collector</h1>
+    </div>
+    <div class="instructions">
+        <h3>How to Play!</h3>
+
+        <ol>
+            <li>To begin the Game, you will be shown a random number.
+                <span>"SUPER NUMBER"</span>
+            </li>
+            <li>There are four crystals to choose from.</li>
+            <ul>
+                <li id="blue">Blue</li>
+                <li id="red">Red</li>
+                <li id="yellow">Yellow</li>
+                <li id="green">Green</li>
+
+            </ul>
+            <li>when you click on a crystal, your score will increse by the selected crystals' value.</li>
+            <li>To WIN, match your score to the SUPER NUMBER.</li>
+            <li>DONT GO ABOVE THE
+                <strong>SUPER NUMBER!!!!,</strong>, or you'll lose :o.</li>
+            <li>The Crystal values will change once a new game begins. </li>
+        </ol>
+    </div>
+    <div class="numberToMatch">
+        <h2>SUPER NUMBER:
+            <span id="randomNumber"></span>
+        </h2>
+    </div>
+    <div class="winsAndLosses">
+        <h2>WINz:
+            <span id="numberWins"></span>
+        </h2>
+        <br>
+        <h2>
+            Losses:
+            <span id="numberLosses"></span>
+            <br>
+            <br>
+        </h2>
+    </div>
+    <div class="crystals">
+        <img src="assets/images/Blue-Crystal-Abstract.jpg" class=crysImage id="one" alt="Blue crystal">
+        <img src="assets/images/Red lotus.JPG" class=crysImage id="two" alt="Red crystal">
+        <img src="assets/images/Yellow crystal.jpg" class=crysImage id="three" alt="Yellow crystal">
+        <img src="assets/images/Green crystal.jpg" class=crysImage id="four" alt="Green crystal">
+
+    </div>
+    <div class="userTotal">
+        <h2>Your total score is:
+            <span id="finalTotal"></span>
+        </h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+
+
+
+</body>
+
+</html>
