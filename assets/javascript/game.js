@@ -1,111 +1,111 @@
-//cant seem to get my javascrript up and running..
-
+// $(document).ready(function ()======== tiz a must 
 $(document).ready(function () {
-    var random = Math.floor(Math.random() * 19 + 120)
 
-    // generates a random number to be shown at the start of the game between 19-20
+    // created variable that generates a random SUPERNUMBER between 35 and 100
+    var superNumber = Math.floor((Math.random() * 100) + 35);
+    // prints SUPERNUMBER to screen
+    $("#randomNumber").text(superNumber);
 
 
-    $('#randomNumber').text(random);
-
-    // supposed to append random number to the randomNumber id in the html doc
-
-    var num1 = Math.floor(Math.random() * 11 + 1)
-    var num2 = Math.floor(Math.random() * 11 + 1)
-    var num3 = Math.floor(Math.random() * 11 + 1)
-    var num4 = Math.floor(Math.random() * 11 + 1)
-
-    // Setting up random numbers for each jewel
-    // Random number has to be between 1 - 12
-
-    var userTotal = 0;
+    // variables
     var wins = 0;
     var losses = 0;
+    var userTotal = 0;
 
-    // wins and losses
+    //these variables generate a random number for each of the four crystal images
+    var num1 = Math.floor(Math.random() * 20 + 7);
+    var num2 = Math.floor(Math.random() * 20 + 7);
+    var num3 = Math.floor(Math.random() * 20 + 7);
+    var num4 = Math.floor(Math.random() * 20 + 7);
 
-    $('#numberWins').text(wins);
-    $('#numberLosses').text(losses);
+    // allows variables to show on screen
+    $("#numberWins").text(wins);
+    $("#numberLosses").text(losses);
+    $("#finalTotal").text(userTotal);
+
 
     //reset function
-
     function reset() {
-        random = Math.floor(Math.random() * 19 + 120);
-        console.log(random)
-        $('#randomNumber').text(random);
-        num1 = Math.floor(Math.random() * 22 + 1);
-        num2 = Math.floor(Math.random() * 22 + 1);
-        num3 = Math.floor(Math.random() * 22 + 1);
-        num4 = Math.floor(Math.random() * 22 + 1);
+        superNumber = Math.floor((Math.random() * 100) + 35);
+
+        $('#randomNumber').text(superNumber);
+        num1 = Math.floor(Math.random() * 20 + 7);
+        num2 = Math.floor(Math.random() * 20 + 7);
+        num3 = Math.floor(Math.random() * 20 + 7);
+        num4 = Math.floor(Math.random() * 20 + 7);
         userTotal = 0;
         $('#finalTotal').text(userTotal);
     }
 
-    //winning function
 
+    //win & lose functions
     function victory() {
-        alert("YOU WIN!!!!");
+        alert("HOT DAM MAN! you win!!! ^~^");
         wins++;
-        $('#numberWins').text(wins);
+        $("#numberWins").text(wins);
         reset();
     }
 
-    //losing function
-
-    function defeat() {
-        alert("You lose :o ");
+    function lose() {
+        alert("TOO MUCH TOO MUCH!!! you lose.. :o");
         losses++;
-        $('#numberLosses').text(losses);
-        reset()
+        $("#numberLosses").text(losses);
+        reset();
     }
 
-    //supposed to make crystals clickable... but they dont...
 
-    $('#one').on('click', function () {
+    //functions X4 for each crystal image to react to the click and execute end game funtion
+
+    $("#one").on("click", function () {
         userTotal = userTotal + num1;
-        console.log("New userTotal= " + userTotal);
-        $('#finalTotal').text(userTotal);
-
-        if (userTotal == random) {
+        $("#finalTotal").text(userTotal);
+        if (userTotal == superNumber) {
             victory();
-        } else if (userTotal > random) {
-            defeat();
-        }
-    })
-
-    $('#two').on('click', function () {
-        userTotal = userTotal + num2;
-        console.log("New userTotal= " + userTotal);
-        $('#finalTotal').text(userTotal);
-        if (userTotal == random) {
-            victory();
-        } else if (userTotal > random) {
-            defeat();
-        }
-    })
-
-    $('#three').on('click', function () {
-        userTotal = userTotal + num3;
-        console.log("New userTotal= " + userTotal);
-        $('#finalTotal').text(userTotal);
+        } else if (userTotal > superNumber) {
+            lose();
+        };
 
 
-
-        if (userTotal == random) {
-            victory();
-        } else if (userTotal > random) {
-            defeat();
-        }
-    })
-    $('#four').on('click', function () {
-        userTotal = userTotal + num4;
-        console.log("New userTotal= " + userTotal);
-        $('#finalTotal').text(userTotal);
-
-        if (userTotal == random) {
-            victory();
-        } else if (userTotal > random) {
-            defeat();
-        }
     });
+
+
+    $("#two").on("click", function () {
+        userTotal = userTotal + num2;
+        $("#finalTotal").text(userTotal);
+        if (userTotal == superNumber) {
+            victory();
+        } else if (userTotal > superNumber) {
+            lose();
+        };
+
+
+    });
+
+
+
+    $("#three").on("click", function () {
+        userTotal = userTotal + num3;
+        $("#finalTotal").text(userTotal);
+        if (userTotal == superNumber) {
+            victory();
+        } else if (userTotal > superNumber) {
+            lose();
+        };
+
+
+    });
+
+
+    $("#four").on("click", function () {
+        userTotal = userTotal + num4;
+        $("#finalTotal").text(userTotal);
+        if (userTotal == superNumber) {
+            victory();
+        } else if (userTotal > superNumber) {
+            lose();
+        };
+
+
+    });
+
 });

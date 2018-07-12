@@ -1,14 +1,7 @@
-body {
-    background-image: url("")
-}
-
 div {
     background-color: white;
     margin: 15px;
     width: 50%;
-}
-
-div {
     border: solid 2px black;
     padding: 10px;
 }
