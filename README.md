@@ -1,5 +1,7 @@
 # CrystalG3
 
+(using jQuery and built from scratch)
+
 May easily be the hardest game you've ever played. 
 
 How to Play!
